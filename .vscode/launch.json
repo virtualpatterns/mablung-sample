@@ -7,11 +7,11 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch ...",
+      "name": "Launch",
       "autoAttachChildProcesses": false,
       "internalConsoleOptions": "openOnSessionStart",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/distributable/sandbox/main.js",
+      "program": "${workspaceFolder}/distributable/library/main.js",
       "runtimeArgs": []
     },
     {

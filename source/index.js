@@ -1,0 +1,34 @@
+import '@virtualpatterns/mablung-source-map-support/distributable/install.js'
+import { WorkerClient } from '@virtualpatterns/mablung-worker'
+
+import { Configuration } from './library/configuration.js'
+import { Log } from './library/log.js'
+
+const Require = __require
+
+async function main() {
+
+  try {
+
+    let worker = new WorkerClient()
+
+    worker.writeTo('./process/log/index.log')
+
+    try {
+
+      await worker.import(Require.resolve('./library/worker/main.js'), Configuration.root)
+
+      Log.debug({ 'ping': await worker.ping() }, 'worker load average is ...')
+      Log.debug(`worker.module.getIt() returned ${await worker.module.getIt()}`)
+
+    } finally {
+      await worker.end()
+    }
+
+  } catch (error) {
+    console.error(error)
+  }
+
+}
+
+main()
