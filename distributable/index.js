@@ -12,7 +12,7 @@ async function main() {
 
     let worker = new WorkerClient();
 
-    worker.writeTo('./process/log/main.log');
+    worker.writeTo('./process/log/index.log');
 
     try {
 
