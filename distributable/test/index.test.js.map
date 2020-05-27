@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../source/test/index.test.js"],"names":["Test","test","pass"],"mappings":"AAAA,OAAOA,IAAP,MAAiB,KAAjB;;AAEAA,IAAI,CAAC,iCAAD,EAAqCC,IAAD,IAAU;AAChDA,EAAAA,IAAI,CAACC,IAAL;AACD,CAFG,CAAJ","sourcesContent":["import Test from 'ava'\n\nTest('@virtualpatterns/mablung-sample', (test) => {\n  test.pass()\n})\n"],"file":"index.test.js"}
