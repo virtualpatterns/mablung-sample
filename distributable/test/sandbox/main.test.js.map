@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../source/test/sandbox/main.test.js"],"names":["Test","test","pass"],"mappings":"AAAA,OAAOA,IAAP,MAAiB,KAAjB;;AAEAA,IAAI,CAAC,KAAD,EAASC,IAAD,IAAU;AACpBA,EAAAA,IAAI,CAACC,IAAL;AACD,CAFG,CAAJ","sourcesContent":["import Test from 'ava'\n\nTest('...', (test) => {\n  test.pass()\n})"],"file":"main.test.js"}
