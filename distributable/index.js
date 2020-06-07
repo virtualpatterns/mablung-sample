@@ -18,14 +18,9 @@ async function main() {
 
     Process.createPidFile(pidPath, { 'handleExit': false, 'handleKillSignal': false });
 
-    let workerLogPath = './process/log/worker.log';
-    FileSystem.ensureDirSync(Path.dirname(workerLogPath));
-
     let worker = new WorkerClient(Require.resolve('./library/worker/index.js'));
 
     try {
-
-      worker.writeTo(workerLogPath);
 
       await worker.module.useConfiguration(Configuration.root);
 
