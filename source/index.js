@@ -1,11 +1,11 @@
 import '@virtualpatterns/mablung-source-map-support/install.js'
+import { FileSystem } from '@virtualpatterns/mablung-file-system'
 import Path from 'path'
 import { Process } from '@virtualpatterns/mablung-process'
 import { WorkerClient } from '@virtualpatterns/mablung-worker'
 
 import { Configuration } from './library/configuration.js'
 import { Log } from './library/log.js'
-import { FileSystem } from '@virtualpatterns/mablung-file-system'
 
 const Require = __require
 
@@ -14,7 +14,7 @@ async function main() {
   try {
 
     let pidPath = './process/pid/index.pid'
-    FileSystem.ensureDirSync(Path.dirname(pidPath))
+    await FileSystem.ensureDir(Path.dirname(pidPath))
 
     Process.createPidFile(pidPath, { 'handleExit': false, 'handleKillSignal': false })
 
