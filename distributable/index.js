@@ -1,4 +1,4 @@
-import { createRequire as _createRequire } from "module";import '@virtualpatterns/mablung-source-map-support/install.js';
+import { createRequire as _createRequire } from "module";import '@virtualpatterns/mablung-source-map-support/install';
 import { FileSystem } from '@virtualpatterns/mablung-file-system';
 import Path from 'path';
 import { Process } from '@virtualpatterns/mablung-process';
